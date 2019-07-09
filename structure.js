@@ -27,6 +27,13 @@ function expect(actual) {
       } else {
         return true;
       }
+    },
+    toInclude: function (element){
+      if (!actual.includes(element)) {
+        throw new Error(`Expected ${actual} to include ${element}`)
+      } else {
+        return true;
+      }
     }
   }
 };

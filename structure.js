@@ -10,17 +10,23 @@ function it(description, callback) {
   } catch(e) {
     console.log(`\t X ${description}`);
   }
-  
-  
 }
 
 function expect(actual) {
   return {
     toEqual: function(expected) {
-      return actual == expected;
-    },
-    toBe: function(expected) {
-      return actual === expected;
+      if (actual != expected) {
+        throw new Error (`Expected ${actual} to equal ${expected}`)
+      } else {
+        return true;
+      }
+    }, 
+    toBe: function (expected) {
+      if (actual !== expected) {
+        throw new Error(`Expected ${actual} to equal ${expected}`)
+      } else {
+        return true;
+      }
     }
   }
-}
+};

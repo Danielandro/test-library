@@ -6,9 +6,9 @@ function describe(testcase, callback) {
 function it(description, callback) {
   try {
     callback();
-    console.log(`\t %c ✓ ${description}`, 'color: #bada55'); 
+    console.log(`\t %c ✓ ${description}`, 'color: #bada55; font-weight: bold'); 
   } catch(e) {
-    console.log(`\t %c X ${description}`, 'color: #D52228');
+    console.log(`\t %c X ${description}`, 'color: #FF0000; font-weight: bold');
   }
 }
 

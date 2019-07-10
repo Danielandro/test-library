@@ -8,7 +8,7 @@ function it(description, callback) {
     callback();
     console.log(`\t %c ✓ ${description}`, 'color: #bada55; font-weight: bold'); 
   } catch(e) {
-    console.log(`\t %c X ${description}`, 'color: #FF0000; font-weight: bold');
+    console.log(`\t %c X ${description} (${e.message})`, 'color: #FF0000; font-weight: bold');
   }
 }
 

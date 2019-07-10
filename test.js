@@ -12,7 +12,7 @@ describe('Calculator', function (){
 
 describe('List', function () {
   it('should be empty at the start', function () {    
-    expect(list).toEqual([]);
+    expect(list.length).toEqual(0);
   });
 
   it('should add books to list', function () {
